@@ -1,0 +1,47 @@
+.modal_compare-wrapper{
+    height: 70vh;
+    padding: 40px 0 60px 0;
+    color: #5c5e62;
+    font-size: 12px;
+    overflow: scroll;
+}
+.edition-compare{
+    margin: 24px 0;
+    padding: 0 0 0 4px;
+    height: 80vh;
+    
+}
+.modal_compare-wrapper::-webkit-scrollbar {
+	width: 0 !important;
+	display: none;
+}
+.compare{
+    display: flex;
+    flex-flow: column wrap;
+    margin: 0 0  10px;
+}
+.compare-title{
+    padding: 10px 0 0;
+    font-size: 14px;
+    margin: 0 0 6px;
+    color: #393c41;
+}
+.compare-param{
+    display: flex;
+    justify-content: space-between;
+}
+.compare-param>span:first-child{
+    flex: 4;
+}
+.compare-param>span:last-child{
+    flex: 3;
+}
+.compare_desc>div>span{
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 5px 0 0px;
+}
+.compare_desc{
+    margin: 20px 0 20px;
+}

@@ -1,0 +1,63 @@
+.mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(120, 120, 121);
+    /* filter: blur(10px); */
+    /* margin: auto; */
+    opacity: .6;
+    z-index: 9998;
+}
+.modal1{
+    position: fixed;
+    width: 72vw;
+    height: 80vh;
+    margin: 14% auto 16% ;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    background: #fff;
+    overflow: hidden;
+    z-index: 9999;
+    box-shadow:  0 0 20px 1px rgba(100, 100, 100,0.5);
+    padding: 0px 24px 0px;
+}
+/* .modal1-content{
+    height: 60vh;
+} */
+
+.title-wrap{
+    display: flex;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 8px;
+}
+.icon-wrap{
+    text-align: center;
+    margin: 0 8px 0 0;
+}
+.icon-wrap i{
+    font-size: 26px;
+    line-height: 26px;
+    font-weight: 600;
+}
+.endurance{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-close{
+    position: absolute;
+    right: 1.6rem;
+    top: 1.6rem;
+    filter: blur(0.5px);
+}
+.icon-guanbi{
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+
