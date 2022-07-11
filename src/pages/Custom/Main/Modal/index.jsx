@@ -3,16 +3,26 @@ import Modal from '@/components/common/Modal/ModalCarDetail/modal'
 import './index.css'
 
 export default function ModalCarDetail(props) {
-    const { visible, setVisible, onModalClose } = props
+    const { showModalCarDetail } = props
+    const {
+        getShowModalCarDetailDispatch,
+        onModalClose,
+        getIsFixedDispatch
+    } = props
     return (
         <Modal
-            visible={visible}
+            visible={showModalCarDetail}
             title=""
             onClose={onModalClose}
         >
             <div className='modal_compare-wrapper'>
                 <div>
-                    <div className='btn-close' onClick={() => setVisible(false)}>
+                    <div
+                        className='btn-close'
+                        onClick={() => {
+                            getShowModalCarDetailDispatch(false);
+                            getIsFixedDispatch(false)
+                        }}>
                         <i className='iconfont icon-guanbi'></i>
                     </div>
                     <div className='title-wrap'>
@@ -90,9 +100,7 @@ export default function ModalCarDetail(props) {
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </Modal>
     )

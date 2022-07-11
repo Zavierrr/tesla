@@ -1,4 +1,4 @@
-import axios from 'axios'
+import { axiosInstance } from "./config";
 
-export const getCarParams = () =>
-    axios.get('https://www.fastmock.site/mock/7c2b4d662d21c3311479338632d3faec/tesla/design')
+export const getCarParamsRequest =
+    () => axiosInstance.get('/design')

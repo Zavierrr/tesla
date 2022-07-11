@@ -1,21 +1,21 @@
 import React, { useState } from 'react'
 import { Wrapper, Content } from './style'
-import { Popup, Space, Button, Mask } from 'antd-mobile'
+import { Popup, Button } from 'antd-mobile'
 
-export default function CLTC() {
+export default function CLTC(props) {
     const [visible1, setVisible1] = useState(false)
+    const { getIsFixedDispatch } = props
 
     return (
         <Wrapper>
-            {/* <Space direction='vertical'> */}
             <Button className='btn-CLTC'
                 onClick={() => {
                     setVisible1(true)
+                    getIsFixedDispatch(true)
                 }}
             >
                 CLTC综合工况
             </Button>
-            {/* </Space> */}
 
             <Popup
                 visible={visible1}
@@ -31,9 +31,11 @@ export default function CLTC() {
                 }}
                 onClose={() => {
                     setVisible1(false)
+                    getIsFixedDispatch(false)
                 }}
                 onMaskClick={() => {
                     setVisible1(false)
+                    getIsFixedDispatch(false)
                 }}
             >
                 {mockContent()}

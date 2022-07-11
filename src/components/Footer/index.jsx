@@ -2,24 +2,47 @@ import React, { useState } from 'react'
 import { Wrapper } from './style'
 import ModalCalculator from './Modal'
 import Dialogue from './Dialogue'
+import { getShowModalCalculator } from './store/actionCreators'
+import { actionCreators } from '../../pages/Custom/store/index'
+import { connect } from 'react-redux'
 
-export default function Footer({ carParams, showEdition }) {
-    const [visible, setVisible] = useState(false)
+function Footer(props) {
+    const {
+        carParamsList,
+        showEdition,
+        showModalCalculator
+    } = props
+
+    const {
+        getShowModalCalculatorDispatch,
+        getIsFixedDispatch
+    } = props
+
     const onModalClose = () => {
-        console.log('modal closed')
-        setVisible(false)
+        getShowModalCalculatorDispatch(false)
+        getIsFixedDispatch(false)
     }
 
     return (
         <Wrapper>
             <div className='calculator'>
-                <div className='calculator-icon' onClick={() => setVisible(true)}>
+                <div
+                    className='calculator-icon'
+                    onClick={() => {
+                        getShowModalCalculatorDispatch(true)
+                        getIsFixedDispatch(true)
+                    }}>
                     <i className='iconfont icon-xiangshang'></i>
                 </div>
-                <div className='calculator-desc' onClick={() => setVisible(true)}>
+                <div
+                    className='calculator-desc'
+                    onClick={() => {
+                        getShowModalCalculatorDispatch(true)
+                        getIsFixedDispatch(true)
+                    }}>
                     <div className='calculator-desc-top'>
                         {
-                            carParams.map(item => {
+                            carParamsList.map(item => {
                                 return (
                                     showEdition == item.id && <span key={item.id} className='calculator-price1'>￥ {item.price}</span>
                                 )
@@ -29,7 +52,7 @@ export default function Footer({ carParams, showEdition }) {
                     </div>
                     <div>
                         {
-                            carParams.map(item => {
+                            carParamsList.map(item => {
                                 return (
                                     showEdition == item.id && <span key={item.id} className='calculator-price1'>￥ {item.another_price}</span>
                                 )
@@ -39,8 +62,33 @@ export default function Footer({ carParams, showEdition }) {
                     </div>
                 </div>
             </div>
-            <Dialogue />
-            <ModalCalculator visible={visible} setVisible={setVisible} onModalClose={onModalClose} />
+            <Dialogue getIsFixedDispatch={getIsFixedDispatch} />
+            <ModalCalculator
+                showModalCalculator={showModalCalculator}
+                getShowModalCalculatorDispatch={getShowModalCalculatorDispatch}
+                getIsFixedDispatch={getIsFixedDispatch}
+                onModalClose={onModalClose} />
         </Wrapper >
     )
 }
+
+const mapStateToProps = (state) => {
+    return {
+        carParamsList: state.custom.carParamsList,
+        showEdition: state.custom.showEdition,
+        showModalCalculator: state.footer.showModalCalculator,
+    }
+}
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getShowModalCalculatorDispatch(data) {
+            dispatch(getShowModalCalculator(data))
+        },
+        getIsFixedDispatch(data) {
+            dispatch(actionCreators.getIsFixed(data))
+        }
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Footer)

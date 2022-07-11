@@ -4,17 +4,27 @@ import propTypes from 'prop-types'
 import CLTC from './CLTC'
 import ModalCarDetail from './Modal'
 
-export default function Main({ carParams, showEdition, setShowEdition }) {
-    const [visible, setVisible] = useState(false)
+export default function Main(props) {
+    // const [visible, setVisible] = useState(false)
+    const {
+        showModalCarDetail,
+        carParamsList,
+        showEdition
+    } = props
+    const {
+        getShowEditionDispatch,
+        getShowModalCarDetailDispatch,
+        getIsFixedDispatch
+    } = props
     const onModalClose = () => {
-        console.log('modal closed')
-        setVisible(false)
+        getShowModalCarDetailDispatch(false);
+        getIsFixedDispatch(false)
     }
     const selectLowerEdition = () => {
-        setShowEdition('1')
+        getShowEditionDispatch('1')
     }
     const selectHigherEdition = () => {
-        setShowEdition('2')
+        getShowEditionDispatch('2')
     }
 
     return (
@@ -23,7 +33,7 @@ export default function Main({ carParams, showEdition, setShowEdition }) {
             <section className='main__section1'>
                 <div className='main__section1_carImg'>
                     {
-                        carParams.map(item => {
+                        carParamsList.map(item => {
                             return (
                                 showEdition == item.id && <img key={item.id} src={item.car_pic} alt="" />
                             )
@@ -37,7 +47,7 @@ export default function Main({ carParams, showEdition, setShowEdition }) {
                 </div>
                 <div className="main__section2_deadline">
                     {
-                        carParams.map(item => {
+                        carParamsList.map(item => {
                             return (
                                 showEdition == item.id && <p key={item.id}>预计交付日期：{item.delivery_date} 周</p>
                             )
@@ -46,7 +56,7 @@ export default function Main({ carParams, showEdition, setShowEdition }) {
                 </div>
                 {/* 汽车参数 */}
                 {
-                    carParams.map(item => {
+                    carParamsList.map(item => {
                         return (
                             showEdition == item.id &&
                             <div className="main__section2_param" key={item.id}>
@@ -58,7 +68,7 @@ export default function Main({ carParams, showEdition, setShowEdition }) {
                                         </div>
                                         <div className='param-desc'>
                                             <span>续航里程</span>
-                                            <CLTC />
+                                            <CLTC getIsFixedDispatch={getIsFixedDispatch} />
                                         </div>
                                     </li>
                                     <li>
@@ -124,16 +134,25 @@ export default function Main({ carParams, showEdition, setShowEdition }) {
                     </div>
                 </div>
                 <div className="edition-detail" >
-                    <button className='btn-edition-detail' onClick={() => setVisible(true)}>
+                    <button
+                        className='btn-edition-detail'
+                        onClick={() => {
+                            getShowModalCarDetailDispatch(true);
+                            getIsFixedDispatch(true)
+                        }}>
                         <span>查看详情</span>
                     </button>
                 </div>
             </section>
-            <ModalCarDetail visible={visible} setVisible={setVisible} onModalClose={onModalClose} />
+            <ModalCarDetail
+                showModalCarDetail={showModalCarDetail}
+                getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
+                getIsFixedDispatch={getIsFixedDispatch}
+                onModalClose={onModalClose} />
         </Wrapper>
     )
 }
 
 Main.propTypes = {
-    carParams: propTypes.array.isRequired
+    carParamsList: propTypes.array.isRequired
 }

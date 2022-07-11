@@ -22,10 +22,13 @@ export const Content = styled.div`
     height: 92vh;
     overflow: scroll;
     border-radius: 50px;
+    &::-webkit-scrollbar {
+        width: 0 !important;
+        display: none;
+    }
     
     .header_question{
-    border-radius: 50px;
-
+        border-radius: 50px;
         text-align: center;
         font-size: 0.9rem;
         color: #393C41;

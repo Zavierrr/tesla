@@ -2,14 +2,16 @@ import React, { useState } from 'react'
 import { Wrapper, Content } from './style'
 import { Popup, Space, Button, Mask } from 'antd-mobile'
 
-export default function Dialogue() {
+export default function Dialogue(props) {
     const [visible1, setVisible1] = useState(false)
+    const { getIsFixedDispatch } = props
 
     return (
         <Wrapper>
             <Button className='btn-dialogue'
                 onClick={() => {
                     setVisible1(true)
+                    getIsFixedDispatch(true)
                 }}
             >
                 <i className='iconfont icon-duihua'></i>
@@ -29,9 +31,12 @@ export default function Dialogue() {
                 }}
                 onClose={() => {
                     setVisible1(false)
+                    getIsFixedDispatch(false)
                 }}
                 onMaskClick={() => {
                     setVisible1(false)
+                    getIsFixedDispatch(false)
+
                 }}
             >
                 {mockContent()}

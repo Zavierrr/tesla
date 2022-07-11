@@ -4,19 +4,29 @@ import './index.css'
 import { useState } from 'react'
 
 export default function ModalCalculator(props) {
-    const { visible, setVisible, onModalClose } = props
+    const { showModalCalculator } = props
+    const {
+        getShowModalCalculatorDispatch,
+        onModalClose,
+        getIsFixedDispatch
+    } = props
     const [active, setActive] = useState('1')
     const showActive = (param) => {
         setActive(param)
     }
     return (
         <Modal
-            visible={visible}
+            visible={showModalCalculator}
             title="付款计算器"
             onClose={onModalClose}
         >
             <div>
-                <div className='btn-close' onClick={() => setVisible(false)}>
+                <div
+                    className='btn-close'
+                    onClick={() => {
+                        getShowModalCalculatorDispatch(false)
+                        getIsFixedDispatch(false)
+                    }}>
                     <i className='iconfont icon-guanbi'></i>
                 </div>
                 <div className='tab'>
