@@ -617,11 +617,11 @@ ${E.current.stack}
         }
         .detail_wrapper{
             overflow: hidden;
-            height: ${e=>e.showEdition=="1"?"180px":"310px"};
+            height: ${e=>e.showEdition=="1"?"185px":"318px"};
             transition: ease-in-out .8s;
             &.show_more{
                 /* 新能源补贴的有无影响高度，需要多重判断 */
-                height: ${e=>e.showEdition=="1"&&e.count<=1?"370px":e.showEdition=="1"&&e.count>1?"340px":"470px"};
+                height: ${e=>e.showEdition=="1"&&e.count<=1?"380px":e.showEdition=="1"&&e.count>1?"350px":"480px"};
                 transition: ease-in-out .8s;
             }
             .buyTesla_detail{
