@@ -4,16 +4,14 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgb(120, 120, 121);
-    /* filter: blur(10px); */
-    /* margin: auto; */
+    /* background-color: rgb(120, 120, 121); */
     opacity: .6;
-    z-index: 9998;
+    z-index: 998;
 }
 .modal1{
     position: fixed;
-    width: 72vw;
-    height: 80vh;
+    width: 90vw;
+    height: 84vh;
     margin: 14% auto 16% ;
     top: 0;
     left: 0;
@@ -22,14 +20,11 @@
     border-radius: 16px;
     background: #fff;
     overflow: hidden;
-    z-index: 9999;
-    box-shadow:  0 0 20px 1px rgba(100, 100, 100,0.5);
-    padding: 0px 24px 0px;
+    z-index: 999;
+    /* box-shadow:  0 0 20px 1px rgba(100, 100, 100,0.5); */
+    /* padding: 0px 24px 0px; */
+    background-color: transparent;
 }
-/* .modal1-content{
-    height: 60vh;
-} */
-
 .title-wrap{
     display: flex;
     font-size: 20px;
@@ -49,12 +44,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #171A20;
 }
 .btn-close{
     position: absolute;
-    right: 1.6rem;
-    top: 1.6rem;
-    filter: blur(0.5px);
+    right: 1.8rem;
+    top: 1.2rem;
+    /* filter: blur(0.5px); */
+    z-index: 99;
+    background-color: rgba(255, 255, 255, .4);
+    padding: 10px;
+    border-radius: 20px;
 }
 .icon-guanbi{
     font-size: 1.1rem;

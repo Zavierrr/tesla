@@ -13,6 +13,13 @@
       "unicode_decimal": 983722
     },
     {
+      "icon_id": "577312",
+      "name": "加号",
+      "font_class": "jiahao",
+      "unicode": "e726",
+      "unicode_decimal": 59174
+    },
+    {
       "icon_id": "4118038",
       "name": "关闭",
       "font_class": "guanbi",
@@ -32,6 +39,13 @@
       "font_class": "xiangxia",
       "unicode": "e616",
       "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "11372671",
+      "name": "减少",
+      "font_class": "jianshao",
+      "unicode": "e8b1",
+      "unicode_decimal": 59569
     }
   ]
 }

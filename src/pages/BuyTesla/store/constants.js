@@ -1,0 +1,2 @@
+export const CHANGE_SUM = 'CHANGE_SUM'
+export const CHANGE_ESTIMATE = 'CHANGE_ESTIMATE'

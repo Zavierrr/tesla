@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
         background-color: #fff;
         top: -12px;
         right: 36px;
-        border-radius: 25px;
+        border-radius: 50%;
         box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, .4);
         i{
             font-size: 40px;
@@ -58,6 +58,7 @@ export const Content = styled.div`
                 padding: 8px 0;
             }
             input{
+                margin-top: 5px;
                 border: none;
                 background-color: transparent;
                 background-color: #f4f4f4;
@@ -65,8 +66,8 @@ export const Content = styled.div`
                 outline: none;
                 font-size: 16px;
                 border-radius: 20px;
-                height: 40px;
-                margin: 0 0 10px 0;
+                height: 30px;
+                /* margin: 0 0 10px 0; */
                 line-height: 16px;
                 text-align: start;
                 &:active{
@@ -86,6 +87,7 @@ export const Content = styled.div`
                     height: 40px;
                     margin: 0 0 10px 0;
                     border: 1px solid #eee;
+                    align-items: center;
                 }
                 .btn-begin{
                     width: 100%;

@@ -10,3 +10,12 @@
     `onClick={()=>xxx)}` 
 - connect to host github.com port 22: Connection refused
     ssh
+
+- data.data
+- render函数map 不要直接放，剥离
+
+- global-style 
+
+- 当页面刷新时，carParamsList 为空，因此需要跳转到主页
+
+- 严谨！！！！！！！！！！做一个么的感情的计算机器QAQ

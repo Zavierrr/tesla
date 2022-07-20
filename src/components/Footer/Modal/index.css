@@ -9,6 +9,7 @@
 }
 .tab>div{
     padding: 6px 0;
+    height: 22px;
     flex: 4;
     align-items: center;
     margin: 0 4px;
@@ -22,7 +23,7 @@
     color: #171A20 !important;
 }
 .tab>div:first-child{
-    padding: 12px 0;
+    padding: 10px 0 3px;
     flex: 3;
 }
 .tab>div>span{
@@ -40,15 +41,16 @@
 
 .cash{
     width: 100%;
-    padding: 0 0 12px;
+    padding: 0 0 8px;
     margin: 0 0 6px;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
     border-bottom: 1px solid #d0d1d2;
+    line-height: 18px;
 }
 .span1{
-    display: inline-block;
+    display: block;
     margin: 8px 0;
     font-size: 12px;
 }
@@ -66,7 +68,7 @@
     padding: 0 0 10px;
     border-bottom: 1px solid #d0d1d2;
 }
-.btn-close{
+.footer-btn-close{
     position: absolute;
     right: 1.6rem;
     top: 1.6rem;

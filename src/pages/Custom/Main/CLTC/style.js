@@ -11,6 +11,7 @@ export const Wrapper = styled.div`
         padding: 0;
         border: none;
         border-radius: 0;
+        z-index: 1;
     }
 `
 export const Content = styled.div`

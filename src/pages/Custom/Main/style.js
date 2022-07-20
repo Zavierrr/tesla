@@ -10,12 +10,13 @@ export const Wrapper = styled.div`
         padding-top: 20px;
         .main__section1_carImg{
             img{
-                max-width: 100vw;
+                max-width: 100%;
             }
         }
     }
     .main__section2{
-        padding: 32px 24px 80px;
+        box-sizing: border-box;
+        padding: 32px 24px 48px;
         .main__section2_title{
             text-align: center;
             font-size: 28px;

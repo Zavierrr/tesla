@@ -4,7 +4,7 @@ import './index.css'
 import { useState } from 'react'
 
 export default function ModalCalculator(props) {
-    const { showModalCalculator } = props
+    const { showModalCalculator, sum, estimate } = props
     const {
         getShowModalCalculatorDispatch,
         onModalClose,
@@ -22,7 +22,7 @@ export default function ModalCalculator(props) {
         >
             <div>
                 <div
-                    className='btn-close'
+                    className='footer-btn-close'
                     onClick={() => {
                         getShowModalCalculatorDispatch(false)
                         getIsFixedDispatch(false)
@@ -45,7 +45,7 @@ export default function ModalCalculator(props) {
                     <div className='tab-list'>
                         <div className='cash'>
                             <span>现金价格</span>
-                            <span>¥ 367,900</span>
+                            <span>¥ {sum}</span>
                         </div>
                         <div className='bottom'>
                             <span className='span1'>价格包含估算增值税</span>
@@ -56,7 +56,7 @@ export default function ModalCalculator(props) {
                             </span>
                             <span className='span2'>
                                 <span>价格 减去预估节省费用</span>
-                                <span>¥ 290,400</span>
+                                <span>¥ {estimate}</span>
                             </span>
                         </div>
                     </div>

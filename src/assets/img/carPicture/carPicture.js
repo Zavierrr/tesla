@@ -1,0 +1,59 @@
+// 颜色图
+export const carPicture_color = {
+    '111': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PBSB,$W40B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '121': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSW,$W40B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '131': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PMNG,$W40B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '141': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSB,$W40B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '151': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPMR,$W40B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '112': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PBSB,$W41B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '122': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSW,$W41B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '132': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PMNG,$W41B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '142': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSB,$W41B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '152': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPMR,$W41B,$IBB1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '213': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PBSB,$W40P,$IPB1,$SLR1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '223': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PPSW,$W40P,$IPB1,$SLR1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '233': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PMNG,$W40P,$IPB1,$SLR1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '243': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PPSB,$W40P,$IPB1,$SLR1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307',
+    '253': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PPMR,$W40P,$IPB1,$SLR1&view=STUD_FRONT34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,450,300,300&version=v0028d202207140307'
+}
+// 轮毂图
+export const carPicture_wheel = {
+    '111': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PBSB,$W40B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '121': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSW,$W40B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '131': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PMNG,$W40B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '141': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSB,$W40B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '151': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPMR,$W40B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '112': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PBSB,$W41B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '122': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSW,$W41B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '132': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PMNG,$W41B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '142': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSB,$W41B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '152': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPMR,$W41B,$IBB1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '213': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PBSB,$W40P,$IPB1,$SLR1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '223': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PPSW,$W40P,$IPB1,$SLR1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '233': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PMNG,$W40P,$IPB1,$SLR1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '243': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PPSB,$W40P,$IPB1,$SLR1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '253': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PPMR,$W40P,$IPB1,$SLR1&view=STUD_RIMCLOSEUP&model=m3&size=1920&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307'
+}
+// 内饰图
+export const carPicture_decoration = {
+    '1': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$IBB1,$PPMR,$MT322&view=STUD_INTERIOR&model=m3&size=1441&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307',
+    '2': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$IBW1,$PPMR,$MT322&view=STUD_INTERIOR&model=m3&size=1441&bkba_opt=0&version=v0028d202207140307&crop=0,0,0,0&version=v0028d202207140307'
+}
+// 侧后方图
+export const carPicture = {
+    '111': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PBSB,$W40B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '121': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSW,$W40B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '131': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PMNG,$W40B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '141': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSB,$W40B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '151': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPMR,$W40B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '112': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PBSB,$W41B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '122': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSW,$W41B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '132': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PMNG,$W41B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '142': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPSB,$W41B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '152': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT322,$PPMR,$W41B,$IBB1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '213': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PBSB,$W40P,$IPB1,$SLR1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '223': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PPSW,$W40P,$IPB1,$SLR1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '233': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PMNG,$W40P,$IPB1,$SLR1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '243': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PPSB,$W40P,$IPB1,$SLR1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307',
+    '253': 'https://static-assets.tesla.cn/configurator/compositor?context=design_studio_2&options=$MT325,$PPMR,$W40P,$IPB1,$SLR1&view=REAR34&model=m3&size=1920&bkba_opt=1&version=v0028d202207140307&crop=1300,460,300,300&version=v0028d202207140307'
+}

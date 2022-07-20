@@ -2,29 +2,37 @@ import React, { useState, useEffect } from 'react'
 import { Wrapper } from './style'
 import propTypes from 'prop-types'
 import CLTC from './CLTC'
-import ModalCarDetail from './Modal'
+import ModalCarDetail from './Modal/index'
+import { carPicture_color } from '@/assets/img/carPicture/carPicture'
+
 
 export default function Main(props) {
-    // const [visible, setVisible] = useState(false)
+    // 解构需要的参数
     const {
         showModalCarDetail,
         carParamsList,
-        showEdition
+        showEdition,
+        color,
+        wheel
     } = props
     const {
         getShowEditionDispatch,
         getShowModalCarDetailDispatch,
-        getIsFixedDispatch
+        getIsFixedDispatch,
+        getWheelDispatch
     } = props
+    let picNumber = showEdition + color + wheel; // 拼接
     const onModalClose = () => {
         getShowModalCarDetailDispatch(false);
         getIsFixedDispatch(false)
     }
     const selectLowerEdition = () => {
         getShowEditionDispatch('1')
+        getWheelDispatch('1')
     }
     const selectHigherEdition = () => {
         getShowEditionDispatch('2')
+        getWheelDispatch('3')
     }
 
     return (
@@ -32,13 +40,7 @@ export default function Main(props) {
             {/* 汽车图片 */}
             <section className='main__section1'>
                 <div className='main__section1_carImg'>
-                    {
-                        carParamsList.map(item => {
-                            return (
-                                showEdition == item.id && <img key={item.id} src={item.car_pic} alt="" />
-                            )
-                        })
-                    }
+                    <img src={carPicture_color[picNumber]} alt="" />
                 </div>
             </section>
             <section className='main__section2'>
@@ -138,7 +140,7 @@ export default function Main(props) {
                         className='btn-edition-detail'
                         onClick={() => {
                             getShowModalCarDetailDispatch(true);
-                            getIsFixedDispatch(true)
+                            // getIsFixedDispatch(true)
                         }}>
                         <span>查看详情</span>
                     </button>

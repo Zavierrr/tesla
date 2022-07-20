@@ -3,33 +3,72 @@ import { Wrapper } from './style'
 import Main from './Main'
 import { connect } from 'react-redux'
 import { actionCreators } from './store/index'
+import { getSum, getEstimate } from '../BuyTesla/store/actionCreators'
+import { number } from 'prop-types'
+import Order from './Order'
+import Design from './Design'
 
 function Custom(props) {
     const {
         carParamsList,
         showEdition,
         showModalCarDetail,
-        isFixed } = props
+        isFixed,
+        color,
+        wheel,
+        decoration,
+        sum,
+        estimate
+    } = props
     const {
         getCarParamsDispatch,
         getShowEditionDispatch,
         getShowModalCarDetailDispatch,
-        getIsFixedDispatch } = props;
+        getIsFixedDispatch,
+        getColorDispatch,
+        getWheelDispatch,
+        getDecorationDispatch,
+        getSumDispatch,
+        getEstimateDispatch
+    } = props;
+
     useEffect(() => {
         getCarParamsDispatch()
+    }, [carParamsList])
 
-    }, [])
     return (
-        <Wrapper style={isFixed ? { position: 'fixed' } : {}}>
-            {/* <Main carParams={props.carParams} showEdition={props.showEdition} setShowEdition={props.setShowEdition} /> */}
+        <Wrapper style={isFixed ? { position: 'fixed', filter: 'blur(20px)' } : {}}>
             <Main
+                carParamsList={carParamsList}
+                showEdition={showEdition}
+                color={color}
+                wheel={wheel}
+                decoration={decoration}
+                getIsFixedDispatch={getIsFixedDispatch}
+                getShowEditionDispatch={getShowEditionDispatch}
+                getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
+                showModalCarDetail={showModalCarDetail}
+                getWheelDispatch={getWheelDispatch} />
+            <Design
+                carParamsList={carParamsList}
+                showEdition={showEdition}
+                color={color}
+                wheel={wheel}
+                decoration={decoration}
+                sum={sum}
+                estimate={estimate}
+                getShowEditionDispatch={getShowEditionDispatch}
+                getColorDispatch={getColorDispatch}
+                getWheelDispatch={getWheelDispatch}
+                getDecorationDispatch={getDecorationDispatch}
+                getSumDispatch={getSumDispatch}
+                getEstimateDispatch={getEstimateDispatch} />
+            <Order
                 carParamsList={carParamsList}
                 showEdition={showEdition}
                 getIsFixedDispatch={getIsFixedDispatch}
                 getShowEditionDispatch={getShowEditionDispatch}
-                getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
-                showModalCarDetail={showModalCarDetail} />
-
+            />
         </Wrapper>
     )
 }
@@ -39,7 +78,12 @@ const mapStateToProps = (state) => {
         carParamsList: state.custom.carParamsList,
         showEdition: state.custom.showEdition,
         showModalCarDetail: state.custom.showModalCarDetail,
-        isFixed: state.custom.isFixed
+        isFixed: state.custom.isFixed,
+        color: state.custom.color,
+        wheel: state.custom.wheel,
+        decoration: state.custom.decoration,
+        sum: state.buyTesla.sum,
+        estimate: state.buyTesla.estimate
     }
 }
 
@@ -47,7 +91,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         getCarParamsDispatch() {
             dispatch(actionCreators.getCarParamsList())
-            console.log('------======1111');
         },
         getShowEditionDispatch(data) {
             dispatch(actionCreators.getShowEdition(data))
@@ -57,6 +100,21 @@ const mapDispatchToProps = (dispatch) => {
         },
         getIsFixedDispatch(data) {
             dispatch(actionCreators.getIsFixed(data))
+        },
+        getColorDispatch(data) {
+            dispatch(actionCreators.getColor(data))
+        },
+        getWheelDispatch(data) {
+            dispatch(actionCreators.getWheel(data))
+        },
+        getDecorationDispatch(data) {
+            dispatch(actionCreators.getDecoration(data))
+        },
+        getSumDispatch(data) {
+            dispatch(getSum(data))
+        },
+        getEstimateDispatch(data) {
+            dispatch(getEstimate(data))
         }
     }
 }
