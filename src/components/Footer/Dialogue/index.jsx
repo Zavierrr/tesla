@@ -109,7 +109,7 @@ const mockContent = () => {
                         </div>
                     </div>
                     <div>
-                        <button className='btn-begin'>开启对话</button>
+                        <button className='btn-begin' onClick={() => alert('用户中心正在开发中，敬请期待:)')}>开启对话</button>
                     </div>
                 </div>
             </div>

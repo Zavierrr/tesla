@@ -1,6 +1,25 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
+    &.fly-enter, &.fly-appear{
+        opacity: 0;
+        /* 启用GPU加速 性能优化 */
+        transform: translate3d(100%, 0, 0);
+    }
+    &.fly-enter-active, &.fly-appear-active{
+        opacity: 1;
+        transition: all .3s;
+        transform: translate3d(0, 0, 0);
+    }
+    &.fly-exit{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+    &.fly-exit-active{
+        opacity: 0;
+        transition: all .3s;
+        transform: translate3d(100%, 0, 0);
+    }
     padding: 80px 0 0;
     .change_config_wrapper{
         height: 40px;
@@ -55,7 +74,9 @@ export const Wrapper = styled.div`
             height: ${props => props.showEdition == '1' ? "180px" : "310px"};
             transition: ease-in-out .8s;
             &.show_more{
-                height: ${props => props.showEdition == '1' ? "370px" : "470px"};
+                /* 新能源补贴的有无影响高度，需要多重判断 */
+                height: ${props => props.showEdition == '1' && props.count <= 1 ? "370px"
+        : props.showEdition == '1' && props.count > 1 ? "340px" : "470px"};
                 transition: ease-in-out .8s;
             }
             .buyTesla_detail{
