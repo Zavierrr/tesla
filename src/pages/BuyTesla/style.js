@@ -71,12 +71,12 @@ export const Wrapper = styled.div`
         }
         .detail_wrapper{
             overflow: hidden;
-            height: ${props => props.showEdition == '1' ? "180px" : "310px"};
+            height: ${props => props.showEdition == '1' ? "185px" : "320px"};
             transition: ease-in-out .8s;
             &.show_more{
                 /* 新能源补贴的有无影响高度，需要多重判断 */
-                height: ${props => props.showEdition == '1' && props.count <= 1 ? "370px"
-        : props.showEdition == '1' && props.count > 1 ? "340px" : "470px"};
+                height: ${props => props.showEdition == '1' && props.count <= 1 ? "380px"
+        : props.showEdition == '1' && props.count > 1 ? "350px" : "480px"};
                 transition: ease-in-out .8s;
             }
             .buyTesla_detail{

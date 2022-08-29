@@ -72,7 +72,7 @@ export default function Design(props) {
                     </div>
                     <div className='fivecolor_wrapper'>
                         <div
-                            onClick={() => { getColorDispatch('1'); console.log(showEdition, '555'); }}
+                            onClick={() => getColorDispatch('1')}
                             className={color == '1' ? 'active' : ''}
                         >
                             <img src="https://static-assets.tesla.cn/share/tesla_design_studio_assets/MODEL3/UI/Paint_Black.png?version=v0028d202207140307" alt="" />

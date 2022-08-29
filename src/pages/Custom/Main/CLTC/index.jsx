@@ -7,14 +7,20 @@ export default function CLTC(props) {
     const { getIsFixedDispatch } = props
     // 小bug，滚到下拉日期处会显示在上面，暂时找不到原因，先用这个办法
     const [show, setShow] = useState(false);
-    useEffect(() => {
-        window.addEventListener('scroll', function () {
-            var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-            if (scrollTop > 340) {
-                setShow(true)
-            } else setShow(false)
-        })
-    }, [show])
+    // useEffect(() => {
+    //     window.addEventListener('scroll', function () {
+    //         var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    //         if (scrollTop > 340) {
+    //             setShow(true)
+    //         } else setShow(false)
+    //     })
+    // }, [show])
+    window.addEventListener('scroll', function () {
+        var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        if (scrollTop > 340) {
+            setShow(true)
+        } else setShow(false)
+    })
 
     return (
         <Wrapper>

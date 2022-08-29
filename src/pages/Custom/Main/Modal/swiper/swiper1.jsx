@@ -5,7 +5,7 @@ export default function Slider1(props) {
     const {
         getShowModalCarDetailDispatch,
         getIsFixedDispatch
-    } = props
+    } = props.func
     return (
         <div className='modal_compare-wrapper'>
             <div>

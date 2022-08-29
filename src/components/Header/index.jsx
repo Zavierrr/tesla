@@ -5,14 +5,13 @@ import { Link } from 'react-router-dom'
 
 export default function Header() {
     const [show, setShow] = useState(false);
-    useEffect(() => {
-        window.addEventListener('scroll', function () {
-            var scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
-            if (scrollTop > 200) {
-                setShow(true)
-            } else setShow(false)
-        })
-    }, [show])
+    window.addEventListener('scroll', function () {
+        let scrollTop = document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+        if (scrollTop > 200) {
+            setShow(true)
+        } else setShow(false)
+    })
+
     return (
         <Wrapper style={show ? { opacity: '1', transition: 'ease-in .8' } : {}}>
             <Link to='/' className='logo' style={show ? { opacity: '0', transition: 'cubic-bezier(0.5,0,0,0.75) .8' } : {}}>

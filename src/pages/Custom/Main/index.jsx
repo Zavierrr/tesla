@@ -6,7 +6,7 @@ import ModalCarDetail from './Modal/index'
 import { carPicture_color } from '@/assets/img/carPicture/carPicture'
 
 
-export default function Main(props) {
+function Main(props) {
     // 解构需要的参数
     const {
         showModalCarDetail,
@@ -14,14 +14,16 @@ export default function Main(props) {
         showEdition,
         color,
         wheel
-    } = props
+    } = props.obj
     const {
         getShowEditionDispatch,
         getShowModalCarDetailDispatch,
         getIsFixedDispatch,
         getWheelDispatch
-    } = props
+    } = props.obj
+
     let picNumber = showEdition + color + wheel; // 拼接
+
     const onModalClose = () => {
         getShowModalCarDetailDispatch(false);
         getIsFixedDispatch(false)
@@ -33,6 +35,13 @@ export default function Main(props) {
     const selectHigherEdition = () => {
         getShowEditionDispatch('2')
         getWheelDispatch('3')
+    }
+
+    const params = {
+        showModalCarDetail: showModalCarDetail,
+        getShowModalCarDetailDispatch: getShowModalCarDetailDispatch,
+        getIsFixedDispatch: getIsFixedDispatch,
+        onModalClose: onModalClose
     }
 
     return (
@@ -146,15 +155,13 @@ export default function Main(props) {
                     </button>
                 </div>
             </section>
-            <ModalCarDetail
-                showModalCarDetail={showModalCarDetail}
-                getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
-                getIsFixedDispatch={getIsFixedDispatch}
-                onModalClose={onModalClose} />
+            <ModalCarDetail params={params} />
         </Wrapper>
     )
 }
 
 Main.propTypes = {
-    carParamsList: propTypes.array.isRequired
+    carParamsList: propTypes.array
 }
+
+export default React.memo(Main)

@@ -9,6 +9,9 @@ import Order from './Order'
 import Design from './Design'
 
 function Custom(props) {
+    useEffect(() => {
+        getCarParamsDispatch()
+    }, [])
     const {
         carParamsList,
         showEdition,
@@ -31,24 +34,30 @@ function Custom(props) {
         getSumDispatch,
         getEstimateDispatch
     } = props;
-
-    useEffect(() => {
-        getCarParamsDispatch()
-    }, [carParamsList])
+    const obj = {
+        carParamsList: carParamsList,
+        showEdition: showEdition,
+        showModalCarDetail: showModalCarDetail,
+        isFixed: isFixed,
+        color: color,
+        wheel: wheel,
+        decoration: decoration,
+        sum: sum,
+        estimate: estimate,
+        getCarParamsDispatch: getCarParamsDispatch,
+        getShowEditionDispatch: getShowEditionDispatch,
+        getShowModalCarDetailDispatch: getShowModalCarDetailDispatch,
+        getIsFixedDispatch: getIsFixedDispatch,
+        getColorDispatch: getColorDispatch,
+        getWheelDispatch: getWheelDispatch,
+        getDecorationDispatch: getDecorationDispatch,
+        getSumDispatch: getSumDispatch,
+        getEstimateDispatch: getEstimateDispatch
+    }
 
     return (
         <Wrapper style={isFixed ? { position: 'fixed', filter: 'blur(20px)' } : {}}>
-            <Main
-                carParamsList={carParamsList}
-                showEdition={showEdition}
-                color={color}
-                wheel={wheel}
-                decoration={decoration}
-                getIsFixedDispatch={getIsFixedDispatch}
-                getShowEditionDispatch={getShowEditionDispatch}
-                getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
-                showModalCarDetail={showModalCarDetail}
-                getWheelDispatch={getWheelDispatch} />
+            <Main obj={obj} />
             <Design
                 carParamsList={carParamsList}
                 showEdition={showEdition}
@@ -119,4 +128,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Custom)
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(Custom))

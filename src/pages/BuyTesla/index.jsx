@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useEffect, useState, useCallback,memo } from 'react'
 import { Wrapper } from './style'
 import { connect } from 'react-redux'
 import { carPicture } from '@/assets/img/carPicture/carPicture'
@@ -200,4 +200,4 @@ const mapDispatchToProps = (dispatch) => {
     return {}
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(BuyTesla)
+export default connect(mapStateToProps, mapDispatchToProps)(React.memo(BuyTesla))

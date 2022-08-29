@@ -9,12 +9,18 @@ import Swiper4 from './swiper/swiper4'
 import Swiper5 from './swiper/swiper5'
 
 export default function ModalCarDetail(props) {
-    const { showModalCarDetail } = props
     const {
+        showModalCarDetail,
         getShowModalCarDetailDispatch,
         onModalClose,
         getIsFixedDispatch
-    } = props
+    } = props.params
+    const func = {
+        showModalCarDetail: showModalCarDetail,
+        onModalClose: onModalClose,
+        getShowModalCarDetailDispatch: getShowModalCarDetailDispatch,
+        getIsFixedDispatch: getIsFixedDispatch
+    }
     return (
         <Modal
             visible={showModalCarDetail}
@@ -23,35 +29,27 @@ export default function ModalCarDetail(props) {
         >
             <Swiper className='aaa' style={{
                 '--track-padding': ' 0 0 25px',
-                // '--track-color': 'white',
                 borderRadius: '16px'
-                // background: 'red',
-                // padding: '0 20px'
             }}>
                 <Swiper.Item style={{ width: '90%', margin: 'auto' }}>
                     <Swiper1
-                        getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
-                        getIsFixedDispatch={getIsFixedDispatch} />
+                        func={func} />
                 </Swiper.Item>
                 <Swiper.Item style={{ width: '90%', margin: 'auto' }}>
                     <Swiper2
-                        getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
-                        getIsFixedDispatch={getIsFixedDispatch} />
+                        func={func} />
                 </Swiper.Item>
                 <Swiper.Item style={{ width: '90%', margin: 'auto' }}>
                     <Swiper3
-                        getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
-                        getIsFixedDispatch={getIsFixedDispatch} />
+                        func={func} />
                 </Swiper.Item>
                 <Swiper.Item style={{ width: '90%', margin: 'auto' }}>
                     <Swiper4
-                        getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
-                        getIsFixedDispatch={getIsFixedDispatch} />
+                        func={func} />
                 </Swiper.Item>
                 <Swiper.Item style={{ width: '90%', margin: 'auto' }}>
                     <Swiper5
-                        getShowModalCarDetailDispatch={getShowModalCarDetailDispatch}
-                        getIsFixedDispatch={getIsFixedDispatch} />
+                        func={func} />
                 </Swiper.Item>
             </Swiper>
         </Modal>

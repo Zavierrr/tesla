@@ -6,7 +6,7 @@ export default function Slider3(props) {
     const {
         getShowModalCarDetailDispatch,
         getIsFixedDispatch
-    } = props
+    } = props.func
     return (
         <div className='support_wrapper'>
             <div>
